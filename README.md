@@ -35,3 +35,27 @@ This repo relies on the following third-party projects:
 - For testing only:
   - [miekg/dns](https://github.com/miekg/dns)
   - [h12w/socks](https://github.com/h12w/socks)
+
+## GoLand运行
+1.编译v2ctl
+```bash
+# 确保在项目根目录
+cd $path_to_project
+
+# 编译 v2ctl 工具
+go build -o v2ctl.exe ./infra/control/main
+```
+
+2.准备配置文件
+```bash
+cp ./release/config/* $path_to_project
+```
+
+3.配置环境变量
+```bash
+# main.go项目环境变量添加
+v2ray.location.tool = $path_to_project
+v2ray.location.config = $path_to_project
+```
+
+4.运行`main.go`
