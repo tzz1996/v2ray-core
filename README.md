@@ -36,7 +36,7 @@ This repo relies on the following third-party projects:
   - [miekg/dns](https://github.com/miekg/dns)
   - [h12w/socks](https://github.com/h12w/socks)
 
-## GoLand运行
+## GoLand、vscode 运行
 1.编译v2ctl
 ```bash
 # 确保在项目根目录

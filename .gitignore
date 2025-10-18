@@ -3,3 +3,4 @@ bazel-*
 .idea
 
 deploy
+__debug_bin.exe
