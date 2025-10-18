@@ -48,14 +48,22 @@ go build -o v2ctl.exe ./infra/control/main
 
 2.准备配置文件
 ```bash
-cp ./release/config/* $path_to_project
+cp ./release/config/* ./deploy/
 ```
 
 3.配置环境变量
 ```bash
 # main.go项目环境变量添加
-v2ray.location.tool = $path_to_project
-v2ray.location.config = $path_to_project
+v2ray.location.tool = ./deploy/
+v2ray.location.config = ./deploy/
 ```
 
 4.运行`main.go`
+```
+# goland
+运行main.go
+
+# vscode
+cd $path_to_project
+go run ./main -config ./deploy/config.json
+```
