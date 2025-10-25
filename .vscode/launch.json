@@ -16,6 +16,19 @@
             },
             "showLog": true,
             "dlvFlags": ["--check-go-version=false"]
+        },
+        {
+            "name": "Debug V2Ctl (Skip Go Version Check)",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/infra/control/main",
+            "args": ["config", "${workspaceFolder}/deploy/config.json"],
+            "env": {
+                "GO111MODULE": "on"
+            },
+            "showLog": true,
+            "dlvFlags": ["--check-go-version=false"]
         }
     ]
 }
