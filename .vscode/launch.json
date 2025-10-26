@@ -12,7 +12,8 @@
             "program": "${workspaceFolder}/main",
             "args": ["-config", "${workspaceFolder}/deploy/config.json"],
             "env": {
-                "GO111MODULE": "on"
+                "GO111MODULE": "on",
+                "v2ray.location.asset": "D:/Git_Repository/v2ray-core/deploy"
             },
             "showLog": true,
             "dlvFlags": ["--check-go-version=false"]
