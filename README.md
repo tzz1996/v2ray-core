@@ -43,7 +43,7 @@ This repo relies on the following third-party projects:
 cd $path_to_project
 
 # 编译 v2ctl 工具
-go build -o v2ctl.exe ./infra/control/main
+go build -ldflags="-s -w" -o deploy/v2ctl.exe ./infra/control/main
 ```
 
 2.准备配置文件
@@ -58,7 +58,12 @@ v2ray.location.tool = ./deploy/
 v2ray.location.config = ./deploy/
 ```
 
-4.运行`main.go`
+4.编译生成可执行程序
+```bash
+go build -ldflags="-s -w" -o deploy/v2ray.exe ./main
+```
+
+5.1 源码运行`main.go`
 ```
 # goland
 运行main.go
@@ -66,4 +71,8 @@ v2ray.location.config = ./deploy/
 # vscode
 cd $path_to_project
 go run ./main -config ./deploy/config.json
+```
+5.2 可执行程序运行
+```
+.\v2ray.exe -config .\config.json
 ```
