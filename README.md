@@ -54,8 +54,9 @@ cp ./release/config/* ./deploy/
 3.配置环境变量
 ```bash
 # main.go项目环境变量添加
-v2ray.location.tool = ./deploy/
-v2ray.location.config = ./deploy/
+v2ray.location.tool = ./deploy/     # 用于指定v2ctl路径
+v2ray.location.config = ./deploy/   # 用于指定config.json路径
+v2ray.location.asset = ./deploy/    # 用于指定geoip.dat和geosite.dat路径
 ```
 
 4.编译生成可执行程序
